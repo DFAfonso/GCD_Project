@@ -33,3 +33,12 @@ The script file, *run_analysis.R* was required to perform the following:
 Details regarding functions called, variables used, etc... will be noted in the *CodeBook.md* file.
 
 
+* The principle data files (X_train, y_train, subject_train, etc...) were read into R, and combined.   The variable names were obtained from the features.txt file and the activity names were pulled from the activity_labels.txt file.
+* Further details will be found in the *Codebook.md* file, but the basic idea is well demonstrated via an image posted by Community TA, David Hood at:
+
+https://class.coursera.org/getdata-007/forum/thread?thread_id=49
+
+
+![](Slide2.png)
+
+
