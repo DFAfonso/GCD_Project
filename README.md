@@ -34,7 +34,7 @@ Details regarding functions called, variables used, etc... will be noted in the 
 
 The tidy data set created by step 5 (above) can be downloaded into R's working directory:
 ```
-download.file("https://github.com/DFAfonso/GCD_Project/blob/master/tidy_data.txt","tidy_data.txt")
+"https://github.com/DFAfonso/GCD_Project/blob/master/tidy_data.txt"
 
 then read via the read.table command in R:
 
