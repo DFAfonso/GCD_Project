@@ -128,13 +128,20 @@ names(data_mean_SD) <- gsub('Acc', 'Acceleration', names(data_mean_SD))
 ####################################################################################################################
 
 # This will be completed with the ddply function from the plyr package
-# numcolwise is also applied for the mean as NAs were introduced otherwise
+# numcolwise is also applied as it allows for mean to be applied to a column of the data.frame (instead of a vector)
 
 library(plyr)
 
-tidy_data <- ddply(.data = data_mean_SD, c("SubjectID", "ActivityID"), numcolwise(mean))
+tidy_data <- ddply(.data = data_mean_SD, c("SubjectID", "ActivityName"),  numcolwise(mean))
 
+# Update the column names
+names(tidy_data) <- paste(rep("Average", length(names(tidy_data))),names(tidy_data))
+names(tidy_data)[c(1,2)] <- c("SubjectID", "ActivityName")
+tidy_data[,3] <- NULL
+
+# Write the tidy dataset to a .txt file - in this case tab-delimited
 write.table(tidy_data, file = "tidy_data.txt", sep = "\t", row.names = FALSE)
+
 
 print(tidy_data)
 
