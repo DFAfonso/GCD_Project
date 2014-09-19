@@ -32,12 +32,14 @@ The script file, *run_analysis.R* was required to perform the following:
 
 Details regarding functions called, variables used, etc... will be noted in the *CodeBook.md* file.
 
-The tidy data set created by step 5 (above) can be downloaded into R's working directory:
+The tidy data set created by step 5 (above) can be downloaded into R's working directory from the following link:
+
+
+https://github.com/DFAfonso/GCD_Project/blob/master/tidy_data.txt
+
+Then read via the read.table command in R:
+
 ```
-"https://github.com/DFAfonso/GCD_Project/blob/master/tidy_data.txt"
-
-then read via the read.table command in R:
-
 tidy_data <- read.table("tidy_data.txt", sep="\t", header = TRUE)
 
 ```
